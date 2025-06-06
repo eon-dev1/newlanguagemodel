@@ -563,6 +563,19 @@ class HuggingFaceConfig(Config):
                 if tok_dict.get("update_src") and tok_dict.get("update_trg"):
                     trg_missing_tokens = sorted(list(set(trg_missing_tokens) - set(src_missing_tokens)))
                     missing_tokens = src_missing_tokens + trg_missing_tokens
+            if tok_dict.get("vocab_list_num_words"):
+                num_words = tok_dict.get("vocab_list_num_words")
+                # throw an error if num_words is not a positive integer
+                if not isinstance(num_words, int) or num_words <= 0:
+                    raise ValueError("vocab_list_num_words must be a positive integer.")
+                with open(self.exp_dir / "word_pairs_sorted.txt", "r", encoding="utf-8") as f:
+                    # Read the first column (space separated words) from the file
+                    # up until the specified number of words
+                    vocab_list = [line.split()[0] for line in f.readlines()[: tok_dict.get("vocab_list_num_words")]]
+                    # add vocab list to missing words if not already in missing words and not in tokenizer keys using set notations
+                for word in vocab_list:
+                    if word not in missing_tokens and word not in self._tokenizer.get_vocab().keys():
+                        missing_tokens.append(word)
 
             if missing_tokens:
                 self._add_tokens(missing_tokens, trained_tokenizers)
