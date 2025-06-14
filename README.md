@@ -1,6 +1,6 @@
-# SIL NLP
+# New Language Model
 
-SIL NLP provides a set of pipelines for performing experiments on various NLP tasks with a focus on resource-poor and minority languages.
+The New Language Model is an add-on to the SIL NLP which provides a set of pipelines for performing experiments on various NLP tasks with a focus on resource-poor and minority languages.
 
 ## Supported Pipelines
 
@@ -8,6 +8,9 @@ SIL NLP provides a set of pipelines for performing experiments on various NLP ta
 - Statistical Machine Translation
 - Word Alignment
 ---
+## Developing support for 
+- xTreme prommpt engineering iterations
+- Training and inferencing on consumer-grade hardware via the HighNoonLLM https://github.com/versoindustries/HighNoonLLM/tree/main/Research
 
 ## SILNLP Prerequisites
 These are the main requirements for the SILNLP code to run on a local machine. Since there are many Python packages that need to be used with complex versioning requirements, we use a Python package called Poetry to mangage all of those. So here is a rough heirarchy of SILNLP with the major dependencies.
