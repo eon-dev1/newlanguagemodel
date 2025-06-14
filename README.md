@@ -10,7 +10,7 @@ The New Language Model is an add-on to the SIL NLP which provides a set of pipel
 ---
 ## Developing support for 
 - xTreme prommpt engineering iterations
-- Training and inferencing on consumer-grade hardware via the HighNoonLLM https://github.com/versoindustries/HighNoonLLM/tree/main/Research
+- Training and inferencing on consumer-grade hardware via the HighNoonLLM https://github.com/versoindustries/HighNoonLLM/tree/main
 
 ## SILNLP Prerequisites
 These are the main requirements for the SILNLP code to run on a local machine. Since there are many Python packages that need to be used with complex versioning requirements, we use a Python package called Poetry to mangage all of those. So here is a rough heirarchy of SILNLP with the major dependencies.
