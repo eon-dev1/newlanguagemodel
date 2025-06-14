@@ -9,7 +9,7 @@ The New Language Model is an add-on to the SIL NLP which provides a set of pipel
 - Word Alignment
 ---
 ## Developing support for 
-- xTreme prommpt engineering iterations
+- xTreme prompt engineering iterations
 - Training and inferencing on consumer-grade hardware via the HighNoonLLM https://github.com/versoindustries/HighNoonLLM
 
 ## SILNLP Prerequisites
